@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service("exampleService")
 public class ExampleServiceImpl implements ExampleService {
  
-    //@Override
+    @Override
     public ExampleModel get(String modelId) {
     	
         return new ExampleModel("example", 1001);
