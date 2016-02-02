@@ -1,10 +1,16 @@
 package com.idodevjobs.sample.mode;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 public class ExampleModel {
     private String string;
     private int anInt;
+    private TreeMap<String, Object>dataMap;
  
-    public ExampleModel() {}
+    public ExampleModel() {
+    	this.dataMap = new TreeMap<String,Object>();
+    }
  
     public ExampleModel(String string, int anInt) {
         this.string = string;
@@ -34,4 +40,12 @@ public class ExampleModel {
                 ", anInt=" + anInt +
                 '}';
     }
+
+	public Map<String, Object> getDataMap() {
+		return dataMap;
+	}
+
+	public void setDataMap(TreeMap<String, Object> dataMap) {
+		this.dataMap = dataMap;
+	}
 }
