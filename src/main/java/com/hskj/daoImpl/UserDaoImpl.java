@@ -41,6 +41,12 @@ public class UserDaoImpl implements UserDao {
     {
     	this.userMapper.updateUser(map);
     }
+    
+    @Override
+    public List<Map<String, Object>> getAllUserMap()
+    {
+    	return this.userMapper.getAllUserMap();
+    }
 
 
 }

@@ -35,4 +35,8 @@
     SET name=#{name}
     WHERE userid=#{id}
   </update>
+  
+  <select id="getAllUserMap" resultType ="java.util.Map" >
+  	SELECT * FROM user
+  </select>
 </mapper>

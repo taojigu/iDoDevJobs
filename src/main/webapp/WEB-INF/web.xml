@@ -26,4 +26,13 @@
         <url-pattern>/services/*</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+    	<servlet-name>ResponseServlet</servlet-name>
+    	<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>ResponseServlet</servlet-name>
+    	<url-pattern>/response/*</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

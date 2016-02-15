@@ -13,6 +13,7 @@ public interface UserDao {
     public User getById(String id);
     public void deleteUser(String id);
     public void updateUser(Map<String,Object> map);
+	public List<Map<String, Object>> getAllUserMap();
 
 
 }

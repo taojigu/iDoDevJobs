@@ -1,5 +1,6 @@
 package com.hskj.serverImpl;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,12 @@ public class UserServiceImpl implements UserService {
 	{
 		this.userDao.updateUser(map);
 		this.userDao.insertUser(user);
+	}
+	
+	@Override
+	public List<Map<String, Object>>getAllUserMap()
+	{
+		return this.userDao.getAllUserMap();
 	}
 
 }

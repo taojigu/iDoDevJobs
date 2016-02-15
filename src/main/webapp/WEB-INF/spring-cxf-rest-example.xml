@@ -16,6 +16,7 @@
     <jaxrs:server id="exampleCxfServer" address="/">
         <jaxrs:serviceBeans>
             <ref bean="exampleService"/>
+            <ref bean="userAuthService"/>
         </jaxrs:serviceBeans>
         <jaxrs:extensionMappings>
             <entry key="json" value="application/json"/>
@@ -31,5 +32,6 @@
             <bean class = "com.idodevjobs.sample.exception.mapper.ConnectionExceptionMapper" />
         </jaxrs:providers>
     </jaxrs:server>
+    
  
 </beans>
