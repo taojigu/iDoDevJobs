@@ -90,6 +90,7 @@
         <property name="mapperInterface" value="com.hskj.mapper.UserMapper" />
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
+    
  
  
  

@@ -7,33 +7,44 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>iDoDevJobs Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
+  
+  	<!-- common -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>4.2.4.RELEASE</version>
+	</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>4.2.4.RELEASE</version>
-        </dependency>
+            <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+    <!-- end of common -->
+    
+    <!-- unit test -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>4.2.4.RELEASE</version>
         </dependency>
-        <dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-		</dependency>
+
 		<dependency>
     	<groupId>org.springframework</groupId>
     		<artifactId>spring-tx</artifactId>
     		<version>4.1.0.RELEASE</version>
 		</dependency>
+		
+		<!-- end of unit test -->
+		
+		<!--  not suer -->
 		
 		<dependency>
 			<groupId>aspectj</groupId>
@@ -47,15 +58,19 @@
 			<version>0.9.2.1</version>
 		</dependency>
 		
+		<!-- end of not sure -->
+		
+
+
+		
+		
+		
+        <!-- RestFul cxf service -->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>2.0.6</version>
-		</dependency>
-		
-		
-		
-        
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.2.4.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxrs</artifactId>
@@ -67,7 +82,7 @@
             <version>2.5.4</version>
         </dependency>
         
-        <dependency>
+          <dependency>
   			<groupId>com.fasterxml.jackson.core</groupId>
   			<artifactId>jackson-core</artifactId>
  			<version>2.5.3</version>
@@ -84,6 +99,10 @@
  			<artifactId>jackson-databind</artifactId>
   			<version>2.5.3</version>
 		</dependency>
+        
+        <!-- end of cxf service -->
+        
+      
 	<!-- my sql -->	
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -100,8 +119,16 @@
         	<artifactId>mysql-connector-java</artifactId>
        		 <version>5.1.38</version>
 		</dependency>
+				<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>2.0.6</version>
+		</dependency>
 		
+		<!-- end of mysql -->
+
   </dependencies>
+
   <build>
     <finalName>iDoDevJobs</finalName>
     <plugins>

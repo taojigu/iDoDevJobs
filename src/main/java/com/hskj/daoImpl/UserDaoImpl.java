@@ -14,32 +14,32 @@ import com.hskj.mapper.UserMapper;
 public class UserDaoImpl implements UserDao {
 	
 	@Autowired
-	UserMapper mapper;
+	UserMapper userMapper;
 	
 	@Override
 	public int countAll()
 	{
-		return this.mapper.countAll();
+		return this.userMapper.countAll();
 	}
     public void insertUser(User user)
     {
-    	this.mapper.insertUser(user);
+    	this.userMapper.insertUser(user);
     }
     public List<User> getAllUser()
     {
-    	return this.mapper.getAllUser();
+    	return this.userMapper.getAllUser();
     }
     public User getById(String id)
     {
-    	return this.mapper.getById(id);
+    	return this.userMapper.getById(id);
     }
     public void deleteUser(String id)
     {
-    	this.mapper.deleteUser(id);
+    	this.userMapper.deleteUser(id);
     }
     public void updateUser(Map<String,Object> map)
     {
-    	this.mapper.updateUser(map);
+    	this.userMapper.updateUser(map);
     }
 
 

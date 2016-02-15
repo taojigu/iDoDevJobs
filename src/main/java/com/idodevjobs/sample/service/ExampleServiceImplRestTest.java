@@ -1,3 +1,4 @@
+
 package com.idodevjobs.sample.service;
 
 import com.idodevjobs.sample.mode.ExampleModel;

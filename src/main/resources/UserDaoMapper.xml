@@ -13,7 +13,7 @@
   </resultMap>
    
   <insert id="insertUser" parameterMap="parameterMapUser">
-    INSERT INTO user(id,name)
+    INSERT INTO user(userid,name)
     VALUES(?,?)
   </insert>
   <select id="countAll" resultType="int">
@@ -24,15 +24,15 @@
   </select>
   <select id="getById" parameterType="String" resultMap="resultMapUser">
     SELECT * FROM user
-    WHERE id=#{value}
+    WHERE userid=#{value}
   </select>
   <delete id="deleteUser" parameterType="String">
     DELETE FROM user
-    WHERE id=#{value}
+    WHERE userid=#{value}
   </delete>
   <update id="updateUser" parameterType="java.util.Map">
     UPDATE user
     SET name=#{name}
-    WHERE id=#{id}
+    WHERE userid=#{id}
   </update>
 </mapper>
